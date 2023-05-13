@@ -1,0 +1,41 @@
+{
+	"name": "wapplersystems/ai-image-meta",
+	"type": "typo3-cms-extension",
+	"description": "",
+	"keywords": [
+		"TYPO3",
+		"extension",
+		"azure",
+		"vision",
+		"image"
+	],
+	"homepage": "https://wappler.systems",
+	"authors": [
+		{
+			"name": "Sven Wappler",
+			"role": "Developer",
+			"homepage": "https://wappler.systems"
+		}
+	],
+	"license": [
+		"GPL-3.0-or-later"
+	],
+	"require": {
+		"typo3/cms-core": "^12.0",
+		"typo3/cms-filemetadata": "^12"
+	},
+	"suggest": {
+	},
+	"require-dev": {
+	},
+	"autoload": {
+		"psr-4": {
+			"WapplerSystems\\AiImageMeta\\": "Classes"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "ai_image_meta"
+		}
+	}
+}
