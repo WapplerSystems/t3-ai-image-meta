@@ -9,8 +9,6 @@ return [
         'backend.form',
     ],
     'imports' => [
-        '@ai-image-meta/backend/' => [
-            'path' => 'EXT:ai-image-meta/Resources/Public/JavaScript/',
-        ],
+        '@ai-image-meta/backend/' =>  'EXT:ai_image_meta/Resources/Public/JavaScript/Backend/'
     ],
 ];
