@@ -4,8 +4,11 @@ declare(strict_types = 1);
 namespace WapplerSystems\AiImageMeta\Controller;
 
 
+use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\StreamFactoryInterface;
+use TYPO3\CMS\Backend\Attribute\Controller;
 use TYPO3\CMS\Backend\Controller\AbstractFormEngineAjaxController;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Http\JsonResponse;
@@ -15,8 +18,15 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  *
  */
+#[Controller]
 class ImageMetaAjaxController extends AbstractFormEngineAjaxController
 {
+
+    public function __construct(
+        private readonly ResponseFactoryInterface $responseFactory,
+        private readonly StreamFactoryInterface $streamFactory
+    ) {
+    }
 
     /**
      *
@@ -24,7 +34,7 @@ class ImageMetaAjaxController extends AbstractFormEngineAjaxController
      * @return ResponseInterface
      * @throws \RuntimeException
      */
-    public function suggestAction(ServerRequestInterface $request): ResponseInterface
+    public function descriptionAction(ServerRequestInterface $request): ResponseInterface
     {
         $this->checkRequest($request);
 
