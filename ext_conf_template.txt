@@ -1,6 +1,6 @@
 
 # cat=Azure; type=string; label=Azure API key
-apiKey =
+azure.apiKey =
 
 # cat=Azure; type=string; label=Azure endpoint
-endPoint =
+azure.endPoint =

@@ -54,9 +54,9 @@ class ImageMetaAjaxController extends AbstractFormEngineAjaxController
         $fileUid = $this->getFileIdByFileMetaId($fileMetaUid);
 
         $azureApiKey = GeneralUtility::makeInstance(ExtensionConfiguration::class)
-            ->get('ai_image_meta', 'azure.apiKey');
+            ->get('ai_image_meta', 'azure/apiKey');
         $azureEndPoint = GeneralUtility::makeInstance(ExtensionConfiguration::class)
-            ->get('ai_image_meta', 'azure.endPoint');
+            ->get('ai_image_meta', 'azure/endPoint');
 
 
         try {
